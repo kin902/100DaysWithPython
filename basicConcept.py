@@ -1,3 +1,4 @@
+'''
 #Data type
 #-String
 print("")
@@ -78,3 +79,4 @@ print("print(f\"Your score is {score}, your height is {height}, you are winning 
 print("")
 print("output")
 print("Your score is 1, your height is 1.8, you are winning is True")
+'''

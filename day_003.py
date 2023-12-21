@@ -1,3 +1,4 @@
+'''
 # Exercise 8 -Day003
 print("Exerce 8 -Day003")
 #   Which number do you want to check?
@@ -97,6 +98,7 @@ print(f"Your final bill is: ${bill}.")
 # Exercise 12 -Day003
 print("-------------------------------------------------------------------------------")
 print("Exercise 12 -Day003")
+'''
 print("The Love Calculator is calculating your score...")
 name1 = input()  # What is your name?
 name2 = input()  # What is their name?
@@ -120,7 +122,7 @@ Love_Score = first_digit + second_digit
 Love_Score = int(Love_Score)
 if Love_Score <= 10 or Love_Score >= 90:
     print(f"Your score is {Love_Score}, you go together like coke and mentos.")
-if Love_Score <= 50 and Love_Score >= 40:
+if 50 >= Love_Score >= 40:
     print(f"Your score is {Love_Score}, you are alright together.")
-if Love_Score <= 40 and Love_Score >= 10 or Love_Score <= 90 and Love_Score >= 50:
+if 40 >= Love_Score >= 10 or 90 >= Love_Score >= 50:
     print(f"Your score is {Love_Score}.")

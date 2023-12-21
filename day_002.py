@@ -1,5 +1,5 @@
 # Exercise 5 - Day002
-
+'''
 print("-------------------------------------------------------------------------------")
 print("Exerce 5 - Day002")
 two_digit_number = input()#39
@@ -45,6 +45,7 @@ print(f"You have " + week_left + " weeks left.")
 # Exercise project - Day002
 #       Tip calculator
 print("-------------------------------------------------------------------------------")
+'''
 print("Welcome to tip caculater!")
 paid = input("What was the total bill?: $")
 percentage_tip = input("What percentage tip would you like to give? 10, 12, or 15?")
