@@ -25,8 +25,6 @@ print("Your word is " + str(len(the_random_word)) + " characters long!")
 print("_ " * len(the_random_word))
 
 # ======= Declare all variable ======
-# Input the player guest
-the_player_guest = str("")
 # Other stuff with the player code (Represent: Head, Body, Left hand, Right hand, Left feet, Right feet)
 how_many_live_left = 6
 # Number characters need to guess
