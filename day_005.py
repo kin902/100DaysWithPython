@@ -88,6 +88,8 @@ index = int()
 for n in range(0, total_allow_characters):
     all_possible_place.append(n)
 
+# TODO Need to refactor code by creating a function for 3 below duplicated code.
+
 while nr_letters > 0:
     index = random.randint(0, len(all_possible_place) - 1)
     if all_possible_place[index] == index:
