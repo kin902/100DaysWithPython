@@ -79,7 +79,6 @@ nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-slot = int()
 password = str()
 all_possible_place = list()
 total_allow_characters = nr_numbers + nr_symbols + nr_letters
@@ -88,31 +87,20 @@ index = int()
 for n in range(0, total_allow_characters):
     all_possible_place.append(n)
 
-# TODO Need to refactor code by creating a function for 3 below duplicated code.
 
-while nr_letters > 0:
-    index = random.randint(0, len(all_possible_place) - 1)
-    if all_possible_place[index] == index:
-        slot = index
-        index = random.randint(0, len(letters) - 1)
-        all_possible_place[slot] = letters[index]
-        nr_letters -= 1
+def interpolate(num, listOf):
+    while num > 0:
+        index = random.randint(0, len(all_possible_place) - 1)
+        if all_possible_place[index] == index:
+            slot = index
+            index = random.randint(0, len(listOf) - 1)
+            all_possible_place[slot] = listOf[index]
+            num -= 1
 
-while nr_symbols > 0:
-    index = random.randint(0, len(all_possible_place) - 1)
-    if all_possible_place[index] == index:
-        slot = index
-        index = random.randint(0, len(symbols) - 1)
-        all_possible_place[slot] = symbols[index]
-        nr_symbols -= 1
 
-while nr_numbers > 0:
-    index = random.randint(0, len(all_possible_place) - 1)
-    if all_possible_place[index] == index:
-        slot = index
-        index = random.randint(0, len(numbers) - 1)
-        all_possible_place[slot] = numbers[index]
-        nr_numbers -= 1
+interpolate(nr_letters, letters)
+interpolate(nr_symbols, symbols)
+interpolate(nr_numbers, numbers)
 
 for n in range(0, len(all_possible_place)):
     password += all_possible_place[n]
