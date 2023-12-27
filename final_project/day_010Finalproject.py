@@ -1,7 +1,7 @@
 # 1 Create all variable need
 # To check if the user use the old number to continue calculate
-second_time = False
-second_time_var = int(0)
+next_time = False
+next_time_var = int(0)
 # A list that contain all number need to calculate
 # Here is the index and meaning: 0 - number1, 1 - number2, 2 - answer, 3 - pre answer
 math_list = list([0, 0, 0, 0])
@@ -29,25 +29,39 @@ print()
 print("Welcome to Py calculater")
 print()
 
+
+def operator():
+    _symbol = ""
+    _flag = True
+
+    # Ask the user to insert a symbol
+    # Check if the user input what symbol like *, /, +, -
+    print("Operator +")
+    print("Operator -")
+    print("Operator *")
+    print("Operator /")
+
+    while _flag:
+        _symbol = str(input("Pick an operation: "))
+        if _symbol in "+-*/":
+            _flag = False
+
+    return _symbol
+
+
 # 3 code need to calculate
 while continue_end_start_new == "y" or continue_end_start_new == "n":
 
     # Check if this a new one or a odd one
-    # If the odd one we dont need the first number
-    if not second_time:
+    # If the odd one we don't need the first number
+    if not next_time:
         math_list[0] = float(input("What's your first number? :"))
-    elif second_time == True:
+    elif next_time:
         math_list[3] = math_list[2]
-        second_time_var = 3
+        next_time_var = 3
     print()
 
-    # Ask the user to insert a symbol
-    # Check if the user input what symbol like *, /, +, -
-    print("+")
-    print("-")
-    print("*")
-    print("/")
-    symbol = str(input("Pick an operation: "))
+    symbol = operator()
     print()
 
     # Ask the user to insert second number
@@ -55,16 +69,16 @@ while continue_end_start_new == "y" or continue_end_start_new == "n":
 
     # Calculate the two number and return to the user
     if symbol == "+":
-        math_list[2] = math_list[0 + second_time_var] + math_list[1]
+        math_list[2] = math_list[next_time_var] + math_list[1]
     elif symbol == "-":
-        math_list[2] = math_list[0 + second_time_var] - math_list[1]
+        math_list[2] = math_list[next_time_var] - math_list[1]
     elif symbol == "*":
-        math_list[2] = math_list[0 + second_time_var] * math_list[1]
+        math_list[2] = math_list[next_time_var] * math_list[1]
     elif symbol == "/":
-        math_list[2] = math_list[0 + second_time_var] / math_list[1]
+        math_list[2] = math_list[next_time_var] / math_list[1]
 
     # After calculate print the final formular
-    print(f"{math_list[0 + second_time_var]} {symbol} {math_list[1]} = {math_list[2]}")
+    print(f"{math_list[next_time_var]} {symbol} {math_list[1]} = {math_list[2]}")
 
     # Check do the user want to continue or end or start a new calculate
     continue_end_start_new = input(f"Type 'y' to continue calculating with {math_list[2]}, or type 'n' to start new "
@@ -72,8 +86,8 @@ while continue_end_start_new == "y" or continue_end_start_new == "n":
 
     # Check if the user continue to calculate with the old number?
     if continue_end_start_new == "y":
-        second_time = True
+        next_time = True
     # Else then just reset everything to normal
     else:
-        second_time = False
-        second_time_var = 0
+        next_time = False
+        next_time_var = 0
