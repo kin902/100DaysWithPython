@@ -1,4 +1,4 @@
-'''
+"""
 # Exercise 1 - Day001
 print("Exercise 1 - Day001")
 print("Day 1 - Python Print Function")
@@ -9,7 +9,7 @@ print("what to print")
 print("")
 print("Exercise 2 - Day001")
 # Different string in one line
-print("Hello\nMy name is Loki\nI'm 11 year olds")
+print("Hello\nMy name is Loki\nI'm 11-year-olds")
 # Plus the string
 print("Hello" + "Loki")
 
@@ -29,7 +29,7 @@ nameCount = len(name3)
 print(nameCount)
 
 # Exercise 4 - Day001 The Final project
-'''
+"""
 print("")
 print("Exercise 4 - Day001 The Final project")
 print("Welcome to Band Name Generator")

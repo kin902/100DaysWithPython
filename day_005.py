@@ -82,19 +82,18 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 password = str()
 all_possible_place = list()
 total_allow_characters = nr_numbers + nr_symbols + nr_letters
-index = int()
 
 for n in range(0, total_allow_characters):
     all_possible_place.append(n)
 
 
-def interpolate(num, listOf):
+def interpolate(num, list_of):
     while num > 0:
         index = random.randint(0, len(all_possible_place) - 1)
         if all_possible_place[index] == index:
             slot = index
-            index = random.randint(0, len(listOf) - 1)
-            all_possible_place[slot] = listOf[index]
+            index = random.randint(0, len(list_of) - 1)
+            all_possible_place[slot] = list_of[index]
             num -= 1
 
 

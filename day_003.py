@@ -1,4 +1,4 @@
-'''
+"""
 # Exercise 8 -Day003
 print("Exerce 8 -Day003")
 #   Which number do you want to check?
@@ -98,7 +98,7 @@ print(f"Your final bill is: ${bill}.")
 # Exercise 12 -Day003
 print("-------------------------------------------------------------------------------")
 print("Exercise 12 -Day003")
-'''
+"""
 print("The Love Calculator is calculating your score...")
 name1 = input()  # What is your name?
 name2 = input()  # What is their name?
