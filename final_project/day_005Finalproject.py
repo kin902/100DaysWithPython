@@ -1,6 +1,7 @@
 # Password Generator Project
 import random
 
+
 print("""                                                                 888 
                                                                  888 
                                                                  888 
