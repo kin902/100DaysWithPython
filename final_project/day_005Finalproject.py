@@ -1,4 +1,6 @@
 # Password Generator Project
+import random
+
 print("""                                                                 888 
                                                                  888 
                                                                  888 
@@ -10,7 +12,6 @@ print("""                                                                 888
 888                                                                  
 888                                                                  
 888              """)
-import random
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
            'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
@@ -35,11 +36,11 @@ for n in range(0, total_allow_characters):
 
 def interpolate(num, listOf):
     while num > 0:
-        index = random.randint(0, len(all_possible_place) - 1)
-        if all_possible_place[index] == index:
-            slot = index
-            index = random.randint(0, len(listOf) - 1)
-            all_possible_place[slot] = listOf[index]
+        index_1 = random.randint(0, len(all_possible_place) - 1)
+        if all_possible_place[index_1] == index_1:
+            slot = index_1
+            index_1 = random.randint(0, len(listOf) - 1)
+            all_possible_place[slot] = listOf[index_1]
             num -= 1
 
 
