@@ -1,4 +1,4 @@
-print("Welcome to tip caculater!")
+print("Welcome to tip calculate!")
 paid = input("What was the total bill?: $")
 percentage_tip = input("What percentage tip would you like to give? 10, 12, or 15?")
 number_of_people = input("How many people to split the bill?")

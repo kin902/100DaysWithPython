@@ -55,8 +55,8 @@ print(f"{line1}\n{line2}\n{line3}")
 '''
 
 # Final Project -Day004
-#print("-------------------------------------------------------------------------------")
-player_choose = input("What do you shoose? Type 0 for Rock, 1 for Paper or 2 for Scissoers.")
+# print("-------------------------------------------------------------------------------")
+player_choose = input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.")
 Rock = '''
     _______
 ---'   ____)
@@ -99,8 +99,9 @@ if computer_choose == 2:
 
 if computer_choose == player_choose:
     print("It's a draw")
-if computer_choose == 0 and player_choose == 2 or computer_choose == 1 and player_choose == 0 or computer_choose == 2 and player_choose == 1:
+if (computer_choose == 0 and player_choose == 2 or computer_choose == 1 and player_choose == 0 or computer_choose == 2
+        and player_choose == 1):
     print("You lose")
-if computer_choose == 0 and player_choose == 1 or computer_choose == 1 and player_choose == 2 or computer_choose == 2 and player_choose == 0:
+if (computer_choose == 0 and player_choose == 1 or computer_choose == 1 and player_choose == 2 or computer_choose == 2
+        and player_choose == 0):
     print("You Win")
-
