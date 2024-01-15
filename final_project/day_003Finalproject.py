@@ -3,7 +3,7 @@ print("""88                                                          88         
 88                                                          88                        88              88                           
 88  ,adPPYba,  8b       d8  ,adPPYba,  ,adPPYba, ,adPPYYba, 88  ,adPPYba, 88       88 88 ,adPPYYba, MM88MMM ,adPPYba,  8b,dPPYba,  
 88 a8"     "8a `8b     d8' a8P_____88 a8"     "" ""     `Y8 88 a8"     "" 88       88 88 ""     `Y8   88   a8"     "8a 88P'   "Y8  
-88 8b       d8  `8b   d8'  8PP"""""""       8b         ,adPPPPP88 88 8b         88       88 88 ,adPPPPP88   88   8b       d8 88          
+88 8b       d8  `8b   d8'  8PP"""""""       8b         ,ad8888888 88 8b         88       88 88 ,ad8888888   88   8b       d8 88          
 88 "8a,   ,a8"   `8b,d8'   "8b,   ,aa "8a,   ,aa 88,    ,88 88 "8a,   ,aa "8a,   ,a88 88 88,    ,88   88,  "8a,   ,a8" 88          
 88  `"bendP"'      "8"      `"bend8"'  `"bend8"' `"8bbdP"Y8 88  `"bend8"'  `"bendP'Y8 88 `"8bbdP"Y8   "Y888 `"bendP"'  88      """)
 print()

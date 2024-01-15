@@ -5,7 +5,8 @@ import random
 # 1. Create the variable
 # ======= Declare all variable ======
 # Index for generate the random number
-list_of_random_word = list(["apple", "banana", "cherry", "orange", "watermelon", "pineapple"])
+list_of_random_word = list(["apple", "banana", "cherry", "orange", "watermelon", "pear", "mango", "kiwi", "lychee",
+                            "lime"])
 index = random.randint(0, len(list_of_random_word) - 1)
 # Try to get a random word in list
 the_random_word = list_of_random_word[index]

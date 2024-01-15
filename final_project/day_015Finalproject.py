@@ -28,6 +28,17 @@ resources = {
     "coffee": 100,
     "milk": 200,
 }
+
+
+def Check_ingredients(order_input):
+    ingredients_need = True
+    for o in range(0, len(MENU[order_input]['ingredients'])):
+        if resources[All_possible_ingredients[o]] < MENU[order]['ingredients'][All_possible_ingredients[o]]:
+            ingredients_need = False
+            print(f"We don't hava enough {All_possible_ingredients[o]}")
+    return ingredients_need
+
+
 # Create a list that contain all possible ingredients in any coffee in the MENU
 All_possible_ingredients = ["water", "coffee", "milk"]
 # Show the user about the drink and its price
@@ -48,28 +59,15 @@ while use == "y":
     # Check if the user type report because it's the only one who work different from other possible order
     if order == "report":
         # Report will print the state to the user
-        print(f"Milk : {resources['milk']} ml")
         print(f"Water : {resources['water']} ml")
         print(f"Coffee : {resources['coffee']} g")
+        print(f"Milk : {resources['milk']} ml")
         print(f"Profit has make : {total_profit} $")
     # If the user don't type report so let do the drink
     else:
-        # Here is the number of ingredient we need to use
-        ingredients_need = 3
-        # Except for espresso it only has 2 ingredients
-        if order == "espresso":
-            ingredients_need = 2
-        # It helps the machine to compare between the ingredient need and the ingredient the machine hava
-        checking_list = int()
-        # Check throw all ingredients need and if the machine has enough that ingredients?
-        for o in range(0, ingredients_need):
-            if MENU[order]['ingredients'][All_possible_ingredients[o]] <= resources[All_possible_ingredients[o]]:
-                checking_list += 1
-            # If not so print what ingredient are missing
-            else:
-                print(f"Sorry we don't have enough {All_possible_ingredients[o]}")
-        # Ask the user to input the money in
-        if checking_list == ingredients_need:
+        ingredients_had = Check_ingredients(order)
+        if ingredients_had:
+            # Ask the user to input the money in
             # The penny worth 0.01 dollar
             penny = float(input("How much penny do you input? : ")) * 0.01
             # The nickel worth 0.05 dollar
@@ -83,7 +81,7 @@ while use == "y":
             # Check if the user input enough money
             if total_money_input >= MENU[order]['cost']:
                 # If yes then use the ingredients to make the coffee and substrata it in the machine storge
-                for i in range(0, ingredients_need):
+                for i in range(0, len(MENU[order]['ingredients'])):
                     resources[All_possible_ingredients[i]] -= MENU[order]['ingredients'][All_possible_ingredients[i]]
                 # Give the user the drink
                 print(f"Here is your {order} ☕️️")
