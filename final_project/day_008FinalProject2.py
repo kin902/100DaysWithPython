@@ -1,7 +1,6 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
             'v', 'w', 'x', 'y', 'z',
-            'à', 'á', 'ả', 'ã', 'ạ', 'â', 'ầ', 'ấ', 'ẩ', 'ẫ', 'ậ', 'ă', 'ằ', 'ắ', 'ẳ', 'ẵ',
-            'ặ',
+            'à', 'á', 'ả', 'ã', 'ạ', 'â', 'ầ', 'ấ', 'ẩ', 'ẫ', 'ậ', 'ă', 'ằ', 'ắ', 'ẳ', 'ẵ','ặ',
             'đ',
             'è', 'é', 'ẻ', 'ẽ', 'ẹ', 'ê', 'ề', 'ế', 'ể', 'ễ', 'ệ',
             'ì', 'í', 'ỉ', 'ĩ', 'ị',
@@ -12,13 +11,23 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
             '+', '-', '*', '/', '=', '<', '>', '%', '&', '@', '#', '$', '^', '_',
             '~', '/',
             '⇧', '⇪', '↵', '⌫', '⇥', ' ',
-            '←', '→', '↑', '↓'
+            '←', '→', '↑', '↓',
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+            'V', 'W', 'X', 'Y', 'Z',
+            'À', 'Á', 'Ả', 'Ã', 'Ạ', 'Â', 'Ầ', 'Ấ', 'Ẩ', 'Ẫ', 'Ậ', 'Ă', 'Ằ', 'Ắ', 'Ẳ', 'Ẵ', 'Ặ',
+            'Đ',
+            'È', 'É', 'Ẻ', 'Ẽ', 'Ẹ', 'Ê', 'Ề', 'Ế', 'Ể', 'Ễ', 'Ệ',
+            'Ì', 'Í', 'Ỉ', 'Ĩ', 'Ị',
+            'Ò', 'Ó', 'Ỏ', 'Õ', 'Ọ', 'Ô', 'Ồ', 'Ố', 'Ổ', 'Ỗ', 'Ộ', 'Ơ', 'Ờ', 'Ớ', 'Ở', 'Ỡ', 'Ợ',
+            'Ù', 'Ú', 'Ủ', 'Ũ', 'Ụ', 'Ư', 'Ừ', 'Ứ', 'Ử', 'Ữ', 'Ự',
+            'Ỳ', 'Ý', 'Ỷ', 'Ỹ', 'Ỵ'
             ]
 go_again = "yes"
 while go_again != "no":
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
     if direction == "encode" or direction == "decode":
-        text = str(input("Type your message:\n")).lower()
+        text = str(input("Type your message:\n"))
         shift = int(input("Type the shift number:\n"))
         original_text = str(text)
         text = list(text)
@@ -52,6 +61,6 @@ while go_again != "no":
             print("Here is some symbol that you can use but can type:")
             print(" ~, ⇧, ⇪, ↵,  ⌫, ⇥, ←, →, ↑, ↓")
         elif choice == "exit":
-            break
+            one_plus_one_equal_two = 1 + 1 == 2
     go_again = str(input("Do you want to use ceaser cipher machine again?: ")).lower()
     print()
