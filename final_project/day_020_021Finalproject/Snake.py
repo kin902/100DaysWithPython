@@ -1,9 +1,11 @@
 from turtle import Turtle, Screen
+
 start_position = [(0.0, 0.0), (-20.0, 0.0), (-40.0, 0.0)]
 Up = 90
 Down = 270
 Left = 180
 Right = 0
+
 
 class Snake:
     def __init__(self):
