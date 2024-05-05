@@ -2,7 +2,7 @@ import time
 import turtle
 from day_020Snake import Snake
 screen = turtle.Screen()
-# The width and the height of thhe screen
+# The width and the height of the screen
 screen.screensize(600, 600)
 # The title of the game
 screen.title("Snake game")
