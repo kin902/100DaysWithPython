@@ -25,7 +25,14 @@ class Snake:
             new_x = self.segments[seg - 1].xcor()
             new_y = self.segments[seg - 1].ycor()
             self.segments[seg].goto(new_x, new_y)
+            self.segments[seg].showturtle()
         self.head.forward(speed)
+
+    def more_segments(self):
+        segment = (Turtle("square"))
+        segment.hideturtle()
+        segment.penup()
+        self.segments.append(segment)
 
     def up(self):
         if self.head.heading() != Down:

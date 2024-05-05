@@ -1,9 +1,10 @@
 import time
-import turtle
-from Snake import Snake
+from turtle import Screen
 from Foods import Food
 from Score_board import Score
-screen = turtle.Screen()
+from Snake import Snake
+
+screen = Screen()
 # The width and the height of the screen
 screen.screensize(300, 300)
 # The title of the game
@@ -27,8 +28,18 @@ while game_is_on:
     time.sleep(0.1)
     snake.move(20)
     if snake.head.distance(food) < 20:
+        snake.more_segments()
         score_board.score += 1
         score_board.update()
         food.refresh()
+    if snake.head.xcor() > 620 or snake.head.xcor() < -620 or snake.head.ycor() > 620 or snake.head.ycor() < -620:
+        game_is_on = False
+        score_board.game_over()
+
+    for segment in snake.segments[1:]:
+        if snake.head.distance(segment) <= 10:
+            game_is_on = False
+            score_board.game_over()
+
 
 screen.exitonclick()
