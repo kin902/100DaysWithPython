@@ -27,7 +27,7 @@ screen.onkey(fun=snake.right, key="Right")
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.06)
+    time.sleep(food.update_speed)
     snake.move(15)
     if snake.head.distance(food) < 20:
         snake.more_segments()
