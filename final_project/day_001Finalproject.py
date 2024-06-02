@@ -1,4 +1,3 @@
-print("Welcome to Band Name Generator")
-name4 = input("What city did you grow up in?")
-pet_name = input(" What's your pet name?")
-print("Your Band Name is", name4, pet_name)
+num1 = int(input("I hate Bacon1"))
+num2 = int(input("I hate Bacon2"))
+print(num1 * num2)
