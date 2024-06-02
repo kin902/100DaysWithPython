@@ -5,7 +5,6 @@ from Foods import Food, Big_food
 from Score_board import Score
 from Snake import Snake
 
-
 screen = Screen()
 # The width and the height of the screen
 screen.screensize(300, 300)
@@ -52,14 +51,16 @@ while game_is_on:
     # If the snake head touch the edge of the screen
     if snake.head.xcor() > 620 or snake.head.xcor() < -620 or snake.head.ycor() > 620 or snake.head.ycor() < -620:
         # The game will stop and print GAME OVER
-        game_is_on = False
-        score_board.game_over()
+        snake.reset_game()
+        score_board.reset_game()
+        food.update_speed = 0.12
     # List throw all snake's segments if the snake's head is touching one of them
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) <= 10:
             # The game will stop and print GAME OVER
-            game_is_on = False
-            score_board.game_over()
+            snake.reset_game()
+            food.update_speed = 0.12
+            score_board.reset_game()
 
     # If the player has eaten 10 foods recently so the big food will appear
     if score_board.last_score == 10:
