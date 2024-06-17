@@ -5,7 +5,7 @@ fruits = eval(input())
 
 # 🚨 Do not change the code above
 
-# TODO: Catch the exception and make sure the code runs without crashing.
+# Task: Catch the exception and make sure the code runs without crashing.
 def make_pie(index):
     try:
         fruit = fruits[index]
@@ -24,7 +24,7 @@ make_pie(4)
 facebook_posts = eval(input())
 
 total_likes = 0
-# TODO: Catch the KeyError exception
+# Task: Catch the KeyError exception
 for post in facebook_posts:
     try:
         total_likes = total_likes + post['Likes']
